@@ -35,7 +35,7 @@ public class FoodDaoImp implements FoodDao {
 	@Override
 	public Food getFoodById(int id) {
 		Session session = sessionFactory.getCurrentSession();
-		Food food = (Food) session.get(Food.class, id); //
+		Food food = (Food) session.get(Food.class, id);
 		session.flush();
 		
 		return food;

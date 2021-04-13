@@ -8,12 +8,13 @@
 	<div class="row">
 		<div id="login-box" class="mx-auto">
 			<h2>Enter Username and Password</h2>
-
-
 			<form name="loginForm"
 				action="<c:url value="/j_spring_security_check" />" method="post">
 				<c:if test="${not empty error}">
 					<div class="error" style="color: red;">${error}</div>
+				</c:if>
+				<c:if test="${not empty msg}">
+					<div class="msg" style="color: red;">${msg}</div>
 				</c:if>
 				<div class="form-group">
 					<label for="username">User: </label> <input type="text"

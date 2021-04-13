@@ -44,11 +44,9 @@ public class HomeController {
 	}
 
 	@RequestMapping("/foodList/foodDetails/{foodId}")
-	public String foodDetails(@PathVariable int foodId, Model model) throws IOException { //
+	public String foodDetails(@PathVariable int foodId, Model model) throws IOException {
 		Food food = foodDao.getFoodById(foodId);
 		model.addAttribute(food);
-
 		return "foodDetails";
 	}
-
 }
